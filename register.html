@@ -1,0 +1,53 @@
+<!DOCTYPE.html>
+<html>
+<head>
+		<title>Register Form</title>
+</head>
+<body>
+
+	<script>
+		function validateForm() {
+  var x = document.forms["myForm"]["fname"].value;
+   var y = document.forms["myForm"]["passwd"].value;
+  if (x == "" || x==null) {
+    alert("Name must be filled out");
+    
+  }
+  else
+  {
+  	if (z == "" || z == null) {
+    alert("password must be filled out");
+	}
+ }
+
+
+}
+
+  
+
+function newAction()
+{
+	var a=parseInt(document.forms["myForm"]["phone"].value);
+	if(isNaN(a)|| a==null){
+		alert("give a valid number")
+	}
+		
+}
+
+    
+
+	</script>
+<form name="myForm" onsubmit="validateForm()"  method="post">
+	<label for="fname">First name:</label><br>
+  <input type="email" id="fname" name="fname" onblur="validateForm()" pattern="[a-z]{6}@gmail.com" value=""><br>
+  <label for="lname">Last name:</label><br>
+  <input type="password" id="passwd" name="passwd" onblur="validateForm1()" value=""><br>
+
+  
+	<br>
+	<input type="tel" id="text" name="phone" value="" onblur="newAction()" >
+  <input type="submit" value="Submit">
+</form>
+</body>
+</html>
+
